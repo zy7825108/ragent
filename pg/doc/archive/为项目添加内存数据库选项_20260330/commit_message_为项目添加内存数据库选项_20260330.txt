@@ -1,0 +1,17 @@
+---
+归档时间: 2026-03-30 19:30
+需求名称: 为项目添加内存数据库选项
+文档类型: Commit Message
+原始路径: /Users/zhongyang/Desktop/个人工作/study/ragent/pg/doc/为项目添加内存数据库选项/commit_message_为项目添加内存数据库选项_20260330.txt
+---
+feat: 为项目添加内存数据库选项 - 实现快速启动和体验
+
+变更内容：
+- 在 bootstrap/pom.xml 中添加 H2 数据库依赖
+- 修改 bootstrap/src/main/resources/application.yaml，统一数据源配置结构
+- 新增 resources/database/h2/schema_h2.sql，H2 数据库表结构初始化脚本
+- 新增 resources/database/h2/data_h2.sql，H2 数据库基础数据初始化脚本
+- 新增 bootstrap/src/main/java/com/nageoffer/ai/ragent/config/DataSourceConfig.java，数据源自动配置类
+
+关联需求：/Users/zhongyang/Desktop/个人工作/study/ragent/pg/doc/为项目添加内存数据库选项/PRD_为项目添加内存数据库选项_20260330_v2.md
+设计文档：/Users/zhongyang/Desktop/个人工作/study/ragent/pg/doc/为项目添加内存数据库选项/程序设计_为项目添加内存数据库选项_20260330.md

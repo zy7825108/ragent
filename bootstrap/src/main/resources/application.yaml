@@ -13,18 +13,33 @@ spring:
       max-request-size: 100MB
 
   datasource:
-    driver-class-name: org.postgresql.Driver
-    type: com.zaxxer.hikari.HikariDataSource
-    username: postgres
-    password: postgres
-    url: jdbc:postgresql://127.0.0.1:5432/ragent?client_encoding=UTF8
-    hikari:
-      connection-timeout: 5000
-      idle-timeout: 600000
-      max-lifetime: 1800000
-      maximum-pool-size: 10
-      minimum-idle: 5
-      pool-name: RagentHikariPool
+    type: H2  # 可选 H2 / POSTGRESQL
+    # H2 内存数据库配置
+    h2:
+      url: jdbc:h2:mem:ragent;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      driverClassName: org.h2.Driver
+      username: sa
+      password:
+      hikari:
+        connectionTimeout: 30000
+        idleTimeout: 600000
+        maxLifetime: 1800000
+        maximumPoolSize: 5
+        minimumIdle: 2
+        poolName: RagentH2Pool
+    # PostgreSQL 数据库配置
+    postgresql:
+      driverClassName: org.postgresql.Driver
+      url: jdbc:postgresql://127.0.0.1:5432/ragent?client_encoding=UTF8
+      username: postgres
+      password: postgres
+      hikari:
+        connectionTimeout: 5000
+        idleTimeout: 600000
+        maxLifetime: 1800000
+        maximumPoolSize: 10
+        minimumIdle: 5
+        poolName: RagentHikariPool
 
   data:
     redis:
