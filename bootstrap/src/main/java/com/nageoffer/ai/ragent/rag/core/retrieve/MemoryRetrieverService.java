@@ -99,7 +99,7 @@ public class MemoryRetrieverService implements RetrieverService {
                 .map(scoredChunk -> new RetrievedChunk(
                         scoredChunk.getChunk().getChunkId(),
                         scoredChunk.getChunk().getContent(),
-                        scoredChunk.getScore()
+                        (float) scoredChunk.getScore()
                 ))
                 .collect(Collectors.toList());
     }

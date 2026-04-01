@@ -100,7 +100,7 @@ public class MemoryVectorStoreService implements VectorStoreService {
         int deleteCount = 0;
         while (iterator.hasNext()) {
             Map.Entry<String, VectorChunkWithEmbedding> entry = iterator.next();
-            if (docId.equals(entry.getValue().getVectorChunk().getDocId())) {
+            if (docId.equals(entry.getValue().getVectorChunk().getChunkId())) {
                 iterator.remove();
                 deleteCount++;
             }
