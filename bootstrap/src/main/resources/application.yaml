@@ -58,7 +58,7 @@ milvus:
 
 rag:
   vector:
-    type: pg  # 可选 milvus / pg
+    type: memory  # 可选 memory / milvus / pg
 
   default:
     collection-name: rag_default_store

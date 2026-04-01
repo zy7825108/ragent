@@ -8,12 +8,11 @@
 ```
 [项目根]/
 ├── .claude/
-│   ├── commands/
-│   │   └── pg/             ← 14 个 /pg: 命令（子目录命名空间）
-│   │       ├── analyze.md  → /pg:analyze
-│   │       ├── spec.md     → /pg:spec
-│   │       ├── prd.md      → /pg:prd
-│   │       └── ...
+│   ├── commands/           ← 18 个 /pg_xxx 命令（pg_ 前缀平铺）
+│   │   ├── pg_analyze.md   → /pg_analyze
+│   │   ├── pg_spec.md      → /pg_spec
+│   │   ├── pg_prd.md       → /pg_prd
+│   │   └── ...
 │   ├── skills/             ← pg 工作流 skills（pg- 前缀区分）
 │   │   ├── pg-spec-state/
 │   │   │   └── SKILL.md
@@ -38,17 +37,21 @@
 
 | 命令 | 说明 |
 |---|---|
-| /pg:analyze | 遗留系统梳理 |
-| /pg:spec    | 初始化需求/查看状态 |
-| /pg:prd     | 生成 PRD |
-| /pg:clarify | 合并澄清答案 |
-| /pg:plan    | 程序设计文档 |
-| /pg:task    | 任务拆分+工时估算 |
-| /pg:code    | 逐文件产码 |
-| /pg:fix     | 修改代码 |
-| /pg:edit    | 修改文档 |
-| /pg:review  | Code Review |
-| /pg:test    | 生成测试用例 |
-| /pg:verify  | 开发自验 |
-| /pg:done    | 收尾+上线Checklist |
-| /pg:archive | 归档 |
+| /pg_analyze | 遗留系统梳理 |
+| /pg_spec    | 初始化需求/查看状态 |
+| /pg_prd     | 生成 PRD |
+| /pg_clarify | 合并澄清答案 |
+| /pg_plan    | 程序设计文档 |
+| /pg_task    | 任务拆分+工时估算 |
+| /pg_code    | 逐文件产码 |
+| /pg_fix     | 修改代码 |
+| /pg_edit    | 修改文档 |
+| /pg_review  | Code Review |
+| /pg_ut      | 单元测试规划 |
+| /pg_test    | 生成测试用例 |
+| /pg_verify  | 开发自验 |
+| /pg_done    | 收尾+上线Checklist |
+| /pg_archive | 归档 |
+| /pg_status  | 状态查询 |
+| /pg_recap   | 会话知识萃取 |
+| /pg_recall  | 知识召回 |
