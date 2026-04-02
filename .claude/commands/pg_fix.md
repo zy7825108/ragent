@@ -40,8 +40,8 @@ description: PG - 修改代码命令 - 针对已有代码进行局部修改（Bu
 【问题类型】：[Bug修复 / 需求变更 / 优化]
 
 【受影响文件】：
-  1. XxxService.java — 修改 doSomething() 方法，补充 total 返回
-  2. XxxVO.java — 新增 total 字段定义
+  1. XxxService（后端）/ XxxView.vue（前端）— 修改 doSomething() 方法/函数，补充返回字段
+  2. XxxVO（后端）/ api/xxx.js（前端）— 新增字段定义
 
 【修改范围说明】：
   仅修改以上 2 个文件，不涉及其他文件。
@@ -68,7 +68,7 @@ description: PG - 修改代码命令 - 针对已有代码进行局部修改（Bu
 | 接口路径/参数/响应字段变更 | ✅ 提示 `/pg_edit` 同步设计文档 |
 | 核心业务逻辑变更 | ✅ 提示 `/pg_edit` 同步时序图/流程描述 |
 | 纯 Bug 修复（无接口/逻辑变化） | ⬜ 无需同步 |
-| 配置项变更 | ✅ 提示 `/pg_edit` 同步 Apollo 配置清单 |
+| 配置项变更 | ✅ 提示 `/pg_edit` 同步配置清单（后端：Apollo 配置清单；前端：环境变量/配置文件） |
 
 **需要同步时输出：**
 ```
