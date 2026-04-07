@@ -302,9 +302,10 @@ feat: [需求名称] - [一句话核心功能描述]（中文）
 - 修改 ApolloConfig，新增 xxx.enable 配置项
 - 新增数据库字段 source_type（tinyint，标识来源平台）
 
-关联需求：[PRD 文档路径]
-设计文档：[程序设计文档路径]
+关联需求：[必填：从 spec-status.json 的 files.prd 读取真实路径]
+设计文档：[必填：从 spec-status.json 的 files.design 读取真实路径]
 ```
+
 
 > ⚠️ **禁止自动执行 `git commit`**，请用户确认内容后手动提交。
 
@@ -350,3 +351,4 @@ feat: [需求名称] - [一句话核心功能描述]（中文）
 - ❌ 禁止自动执行 `git commit`
 - ❌ 当存在 `/pg_verify` ❌ 不符合项时，禁止允许收尾
 - ❌ Checklist 中与本次需求无关的章节**必须省略**，不得全量输出
+- ❌ **Commit Message 中「关联需求」和「设计文档」必须填写真实文件路径**，不得保留占位符 `[...]` 原文
